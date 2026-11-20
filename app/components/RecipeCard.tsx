@@ -1,8 +1,9 @@
+import Link from "next/link";
 import type { Recipe } from "../data/recipes";
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
-    <div className="card">
+    <Link className="card" href={`/recipe/${recipe.id}`}>
       <div className="card-art">{recipe.emoji}</div>
       <h3>{recipe.title}</h3>
       <div className="card-meta">
@@ -12,6 +13,6 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
         </span>
         <span className="cuisine">{recipe.cuisine}</span>
       </div>
-    </div>
+    </Link>
   );
 }
