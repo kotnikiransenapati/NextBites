@@ -1,4 +1,4 @@
-export type Recipe = {
+﻿export type Recipe = {
   id: string;
   title: string;
   emoji: string;
